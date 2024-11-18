@@ -1,16 +1,5 @@
-interface User {
-  name: string;
-  id: number;
+function greet(name: string, date: Date) {
+  console.log(`halo ${name}, today is ${date.toDateString()}`);
 }
 
-class UserAccount {
-  name: string;
-  id: number;
-
-  constructor(name: string, id: number) {
-    this.name = name;
-    this.id = id;
-  }
-}
-
-const user: User = new UserAccount("jono", 1);
+greet("jono", new Date());
