@@ -1,5 +1,7 @@
 "use strict";
-function greet(name, date) {
-    console.log(`halo ${name}, today is ${date.toDateString()}`);
+function P(p) {
+    if (typeof p === "string") {
+        return "bjir";
+    }
+    return "bukan string";
 }
-greet("jono", new Date());
