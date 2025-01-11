@@ -1,9 +1,19 @@
-type P = string | number;
+class SomeClass {
+  constructor(public value: string) {}
+}
 
-function P(p: P): string {
-  if (typeof p === "string") {
-    return "bjir";
-  }
+type SomeConstructor = {
+  new (s: string): SomeClass;
+};
 
-  return "bukan string";
+function createInstance(ctor: SomeConstructor, arg: string) {
+  return new ctor(arg);
+}
+
+// Contoh penggunaan
+const instance = createInstance(SomeClass, "hello");
+console.log(instance.value); // Output: "hello"
+
+function tests(): void {
+  return "nb";
 }
